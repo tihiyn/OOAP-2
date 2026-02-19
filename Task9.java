@@ -106,7 +106,7 @@ abstract class General {
     // печать
     public void print() {
         StringBuilder sb = new StringBuilder(this.getTrueClass().getSimpleName())
-            .append(" {");
+            .append("{");
         Field[] fields = getClass().getDeclaredFields();
         for (int i = 0; i < fields.length; i++) {
             fields[i].setAccessible(true);
