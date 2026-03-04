@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-interface Addable<T> {
+interface Addable<T extends Any> {
     T add(T val);
 }
 
