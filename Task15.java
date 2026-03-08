@@ -32,7 +32,7 @@ class Manager extends User {
 class Admin extends User {
     @Override
     public void createFile(String name) {
-        // создать файл в любой директории
+        // может создать файл в любой директории
     }
 }
 
