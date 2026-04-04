@@ -5,7 +5,7 @@ abstract class Payment {
 
     public static final int PROCESS_NOTHING = -1;
     public static final int PROCESS_OK = 0;
-    public static final int PROCESS_ERROR = 11;
+    public static final int PROCESS_ERROR = 1;
 
     public Payment(Method m) {
         this.m = m;
