@@ -1,10 +1,16 @@
 // иерархия "Тип платежа"
 abstract class Payment {
-    private Method m;
+    private final Method m;
     private int processStatus;
 
+    public static final int PROCESS_NOTHING = -1;
     public static final int PROCESS_OK = 0;
-    public static final int PROCESS_ERROR = -1;
+    public static final int PROCESS_ERROR = 11;
+
+    public Payment(Method m) {
+        this.m = m;
+        processStatus = PROCESS_NOTHING;
+    }
 
     abstract public void process();
 
@@ -14,11 +20,19 @@ abstract class Payment {
 }
 
 class Order extends Payment {
+    public Order(Method m) {
+        super(m);
+    }
+
     @Override
     public void process() {}
 }
 
 class Subscription extends Payment {
+    public Subscription(Method m) {
+        super(m);
+    }
+
     @Override
     public void process() {}
 }
